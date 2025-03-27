@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { useCrudStore } from '~/store/store';
+
 
 
 const state=reactive({
@@ -39,11 +39,9 @@ const state=reactive({
 
 })
 
-const crudST=useCrudStore()
+
 const registrarDatos=() => {
-    crudST.addItem({
-      nombre:state.nombre, dni:state.dni, premiun:state.premiun
-    })
+
     state.nombre=''
     state.dni=''
     state.premiun=false
